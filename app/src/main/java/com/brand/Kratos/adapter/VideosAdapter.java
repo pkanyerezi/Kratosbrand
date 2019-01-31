@@ -131,22 +131,23 @@ public class VideosAdapter extends RecyclerView.Adapter<VideosAdapter.MyViewHold
         MainContainer.vide_code = video_id;
         holder.duration_id.setText(video_duration);
         holder.textrecycler.setText(video_title);
-        holder.likes_tx_id.setText(lists.getLikes()+"");
-        holder.dislikes_txt_id.setText(lists.getDislikes()+"");
+        holder.likes_tx_id.setText(lists.getLikes()+" Likes");
+        holder.dislikes_txt_id.setText(lists.getDislikes()+"Dis-likes");
+        holder.share_video.setText("Share");
         holder.comment_btn.setText("Comments");
         final int likes = lists.getLikes()+1;
         final int dislikes = lists.getDislikes()+1;
         holder.likes_tx_id.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                holder.likes_tx_id.setText(likes+"");
+                holder.likes_tx_id.setText(likes+" Likes");
             log_action(lists.getCode().toString(),"LIKE","ANDROID");
             }
         });
         holder.dislikes_txt_id.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                holder.dislikes_txt_id.setText(dislikes+"");
+                holder.dislikes_txt_id.setText(dislikes+" Dis-likes");
                 log_action(lists.getCode().toString(),"DISLIKE","ANDROID");
 
             }
