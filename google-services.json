@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "783435283366",
+    "firebase_url": "https://kratosbrand-ce7d4.firebaseio.com",
+    "project_id": "kratosbrand-ce7d4",
+    "storage_bucket": "kratosbrand-ce7d4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:783435283366:android:8f2e91c36bffc8ea",
+        "android_client_info": {
+          "package_name": "ini.brand.Kratos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "783435283366-f6f437bvp5q67a6coie345nir7bhkmq0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ini.brand.Kratos",
+            "certificate_hash": "8b8dff9e44e815f8617e65a85bdde1f3937d3f1c"
+          }
+        },
+        {
+          "client_id": "783435283366-j2itfl2lppv3861l03069lehlb00j3sq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8hOZRwwBtoVgCjZy_7zWcoCUOIxN6nAw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "783435283366-j2itfl2lppv3861l03069lehlb00j3sq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

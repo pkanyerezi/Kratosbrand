@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/black"
+        app:popupTheme="@style/AppTheme.PopupOverlay" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_margin="6dp"
+                android:id="@+id/video_back_btn"
+                android:src="@drawable/ic_close_black_24dp"
+                android:layout_height="24dp" />
+            <com.brand.Kratos.customfonts.MyTextView_Roboto_Regular
+                android:layout_width="wrap_content"
+                android:text="Documentaries"
+                android:id="@+id/title_id"
+                android:textColor="@color/black"
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                android:layout_margin="6dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+    <!--Frame layout is used to have the overlapping view of views
+    and button-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:id="@+id/video_header_container"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+       android:id="@+id/player_container"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:elevation="2dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+
+            android:background="@color/black"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/ic_arrow_back_video_black_24dp"
+                android:layout_margin="4dp"
+                android:visibility="gone"
+                android:layout_height="wrap_content" />
+            <com.longtailvideo.jwplayer.JWPlayerView
+                xmlns:jwp="http://schemas.android.com/apk/lib/com.longtailvideo.jwplayer"
+                android:layout_width="match_parent"
+                android:layout_height="270dp"
+                android:id="@+id/playerView"
+                app:jw_mute="false"
+
+                jwp:jw_autostart="true"/>
+        </RelativeLayout>
+        <include
+            android:layout_width="match_parent"
+            android:id="@+id/video_details_id"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/player_container"
+            layout="@layout/content_video_details" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_below="@id/video_details_id"
+            android:id="@+id/related_videos_id"
+            android:layout_height="wrap_content">
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/swipeRefreshLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                    android:layout_marginBottom="60dp"
+                    android:id="@+id/related_items_recycler"/>
+
+            </android.support.v4.widget.SwipeRefreshLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+
+    </FrameLayout>
+
+
+
+</LinearLayout>

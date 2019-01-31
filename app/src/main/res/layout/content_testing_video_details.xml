@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".TestingVideoDetails"
+    tools:showIn="@layout/activity_testing_video_details">
+    <LinearLayout android:layout_width="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+
+        android:background="@color/white"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="19.3dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="9.3dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:layout_marginLeft="9.3dp">
+
+                <com.brand.Kratos.customfonts.MyTextView_Roboto_Medium
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/video_title_id"
+                    android:text="I Lay My Love on You"
+                    android:textSize="12.3dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.brand.Kratos.customfonts.MyTextView_Roboto_Regular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="200m Views "
+                        android:id="@+id/views_id_txt_id"
+                        android:textSize="12.3dp"
+                        android:textColor="@color/mt_text_black" />
+
+                    <com.brand.Kratos.customfonts.MyTextView_Roboto_Medium
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3:57"
+                        android:id="@+id/duration_id"
+                        android:textSize="12.3dp"
+                        android:textColor="@color/mt_text_black"
+                        android:textStyle="normal"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="22dp"
+                android:src="@drawable/ic_keyboard_arrow_down_black_24dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="24.3dp"
+                android:layout_marginRight="24.3dp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_margin="8dp"
+            android:layout_marginBottom="4dp"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:drawableTop="@drawable/ic_thumb_up_black_24dp"
+                android:paddingBottom="2dp"
+                android:id="@+id/likes_tx_id"
+                android:paddingTop="2dp"
+                android:textSize="12.5dp"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="\n22 likes"
+                android:textColor="@color/mt_text_black" />
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="0dp"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:drawableTop="@drawable/ic_thumb_down_black_24dp"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp"
+                android:textSize="12.5dp"
+                android:id="@+id/dislikes_txt_id"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="\n26 dislikes"
+                android:textColor="@color/mt_text_black" />
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="0dp"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:drawableTop="@drawable/ic_share_black_24dp"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp"
+                android:textSize="12.5dp"
+                android:id="@+id/share_btn"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="\nShare"
+                android:textColor="@color/mt_text_black" />
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="0dp"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:drawableTop="@drawable/ic_group_black_24dp"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp"
+                android:textSize="12.5dp"
+                android:id="@+id/comment_btn"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="\n33 Comments"
+                android:textColor="@color/mt_text_black" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="6dp"
+            android:layout_marginBottom="6dp"
+            android:background="@color/viewgrey"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_height="wrap_content">
+            <com.github.ivbaranov.mli.MaterialLetterIcon
+                android:layout_width="@dimen/letter_icon_size"
+                android:layout_height="@dimen/letter_icon_size"
+                android:id="@+id/letter_budge"
+                app:mli_shape_color="@color/bgBottomNavigation"
+                app:mli_shape_type="circle"
+                app:mli_letter="D"
+                app:mli_letter_color="@color/white"
+                app:mli_border_color="@color/image_gray"
+                app:mli_border_size="2"
+                app:mli_letter_size="26"
+                android:layout_marginLeft="8dp"
+                app:mli_letters_number="1"
+                app:mli_initials="true"
+                app:mli_initials_number="2"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <com.brand.Kratos.customfonts.MyTextView_Roboto_Medium
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/categoty_id"
+                    android:text="Documentary"
+                    android:layout_marginLeft="8dp"
+                    android:textSize="12.3dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+
+                    android:layout_marginLeft="8dp"
+                    android:layout_height="wrap_content">
+                    <com.brand.Kratos.customfonts.MyTextView_Roboto_Regular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Published On"
+                        android:id="@+id/published_date"
+                        android:textSize="12.3dp"
+                        android:textColor="@color/mt_text_black" />
+                    <com.github.curioustechizen.ago.RelativeTimeTextView
+                        android:id="@+id/timestamp"
+                        android:layout_width="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:textSize="12.3dp"
+                        android:textColor="@color/mt_text_black"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="6dp"
+            android:background="@color/viewgrey"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_margin="8dp"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <com.brand.Kratos.customfonts.MyTextView_Roboto_Regular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Auto Play"
+                android:textSize="12.3dp"
+                android:textStyle="bold"
+                android:textColor="@color/mt_text_black" />
+            <View
+                android:layout_width="0dp"
+
+                android:layout_weight="1"
+                android:layout_height="0dp"/>
+            <com.suke.widget.SwitchButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/autoreply_id"
+                app:sb_checked="true"
+                app:sb_checked_color="@color/bgBottomNavigation"
+                app:sb_checkline_color="@color/bgBottomNavigation"
+                app:sb_checkline_width="0dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</android.support.v4.widget.NestedScrollView>

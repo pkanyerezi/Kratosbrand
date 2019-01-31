@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f4"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+   <include layout="@layout/toolbar_navigation" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@drawable/shadow_down" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="100dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <com.brand.Kratos.customfonts.MyTextView_Roboto_Medium
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18.7dp"
+                android:layout_marginTop="19.7dp"
+                android:text="Recently Played"
+                android:textColor="@color/black"
+                android:textSize="12.3sp" />
+
+            <!--Recently played-->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:clipToPadding="false"
+                android:paddingLeft="18.7dp" />
+
+            <com.brand.Kratos.customfonts.MyTextView_Roboto_Medium
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18.7dp"
+                android:layout_marginTop="19.7dp"
+                android:text="Popular Album"
+                android:textColor="@color/black"
+                android:textSize="12.3sp" />
+
+            <!--Popular Album-->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:clipToPadding="false"
+                android:paddingLeft="18.7dp" />
+
+            <com.brand.Kratos.customfonts.MyTextView_Roboto_Medium
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18.7dp"
+                android:layout_marginTop="19.7dp"
+                android:text="Top Chart"
+                android:textColor="@color/black"
+                android:textSize="12.3sp" />
+
+            <!--Top Chart-->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:clipToPadding="false"
+                android:paddingLeft="18.7dp" />
+
+            <com.brand.Kratos.customfonts.MyTextView_Roboto_Medium
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18.7dp"
+                android:layout_marginTop="19.7dp"
+                android:text="COCO Exclusive"
+                android:textColor="@color/black"
+                android:textSize="12.3sp" />
+
+            <!--Coco Exclusive-->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:clipToPadding="false"
+                android:paddingLeft="18.7dp" />
+
+            <com.brand.Kratos.customfonts.MyTextView_Roboto_Medium
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18.7dp"
+                android:layout_marginTop="19.7dp"
+                android:text="Genres"
+                android:visibility="gone"
+                android:textColor="@color/black"
+                android:textSize="12.3sp" />
+
+            <!--Genre-->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:clipToPadding="false"
+                android:paddingLeft="18.7dp" />
+
+            <com.brand.Kratos.customfonts.MyTextView_Roboto_Medium
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18.7dp"
+                android:layout_marginTop="19.7dp"
+                android:text="Created for you"
+                android:visibility="gone"
+                android:textColor="@color/black"
+                android:textSize="12.3sp" />
+
+            <!--Created for You-->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="37dp"
+                android:layout_marginTop="12dp"
+                android:clipToPadding="false"
+                android:paddingLeft="18.7dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@drawable/black_shadow" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

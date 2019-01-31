@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_gravity="center" >
+<!--
+    <com.facebook.shimmer.ShimmerFrameLayout android:id="@+id/shimmer_view_container"
+    android:layout_width="wrap_content"
+    android:visibility="gone"
+    android:layout_height="wrap_content"
+   >
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="6dp">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="6dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/image_thumbnail"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/imageplaceholder"
+            android:layout_margin="4dp"/>
+
+    </LinearLayout>
+
+    <com.brand.Kratos.customfonts.MyTextView_Roboto_Medium
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/trending_tite"
+        android:text="hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh"
+    android:layout_marginRight="6dp"
+        android:layout_marginTop="5dp"/>
+
+</LinearLayout>
+
+</LinearLayout>
+</com.facebook.shimmer.ShimmerFrameLayout>
+-->
+    <com.brand.Kratos.customfonts.MyTextView_Roboto_Bold
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="No comments yet"
+
+        android:visibility="gone"
+        android:textSize="20sp"
+        android:textColor="@color/placeholder_bg"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content" />
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout_comments"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_comments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="12dp"
+            android:clipToPadding="false" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+</RelativeLayout>

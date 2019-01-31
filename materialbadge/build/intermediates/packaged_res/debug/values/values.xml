@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MaterialBadgeTextView"><attr name="android:background"/><attr format="dimension" name="mbtv_border_width"/><attr format="color" name="mbtv_border_color"/><attr format="float" name="mbtv_border_alpha"/><attr format="enum" name="mbtv_type">
+            <enum name="shadow_gradual" value="1"/>
+            <enum name="shadow_alpha" value="2"/>
+        </attr></declare-styleable>
+    <string name="app_name">MaterialBadgeTextViewLibrary</string>
+</resources>

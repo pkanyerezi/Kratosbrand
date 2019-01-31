@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/tags_container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp">
+
+        <com.github.ivbaranov.mli.MaterialLetterIcon
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/letter_budge"
+            app:mli_shape_color="@color/black"
+            app:mli_shape_type="circle"
+            app:mli_letter="KP"
+            android:layout_marginRight="8dp"
+            app:mli_letter_color="@color/white"
+            app:mli_border_color="@color/image_gray"
+            app:mli_border_size="2"
+            app:mli_letter_size="26"
+            app:mli_letters_number="2"
+            app:mli_initials="true"
+            app:mli_initials_number="2"
+            />
+
+    </LinearLayout>
+
+    <com.brand.Kratos.customfonts.MyTextView_Roboto_Medium
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tags_tite"
+
+        android:textColor="@android:color/black"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"/>
+
+</LinearLayout>
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/category_item_container_id"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginRight="11dp"
+    android:orientation="vertical">
+
+
+
+    <LinearLayout
+        android:id="@+id/llMusic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8.3dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginBottom="3dp"
+        android:background="@drawable/rectangle_white_gray_rounded"
+        android:gravity="center"
+        android:layout_marginLeft="6dp">
+
+        <com.brand.Kratos.customfonts.TextViewSFProDisplaySemibold
+            android:id="@+id/txt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Westlife"
+            android:paddingBottom="8.3dp"
+            android:paddingEnd="23.7dp"
+            android:paddingStart="23.7dp"
+            android:paddingTop="8.3dp"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/image1"
+        android:layout_width="63dp"
+        android:layout_height="63dp"
+        android:visibility="gone"
+        android:src="@drawable/ic_launcher_background"
+        app:civ_border_color="#31707070"
+        app:civ_border_width="0.7dp" />
+    <com.github.ivbaranov.mli.MaterialLetterIcon
+        android:layout_width="@dimen/letter_icon_size"
+        android:layout_height="@dimen/letter_icon_size"
+        android:id="@+id/letter_budge"
+        app:mli_shape_color="@color/black"
+        app:mli_shape_type="circle"
+        app:mli_letter=""
+        android:visibility="gone"
+        app:mli_letter_color="@color/white"
+        app:mli_border_color="@color/image_gray"
+        app:mli_border_size="2"
+        app:mli_letter_size="26"
+        app:mli_letters_number="1"
+        app:mli_initials="true"
+        app:mli_initials_number="2"
+    />
+    <com.brand.Kratos.customfonts.TextViewSFProDisplaySemibold
+        android:id="@+id/txt1_"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9.4dp"
+        android:gravity="center_horizontal"
+        android:text="Westlife"
+        android:visibility="gone"
+        android:breakStrategy="simple"
+        android:textColor="@color/black"
+        android:textSize="11.7dp" />
+
+</LinearLayout>-->

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.brand.Kratos.ConfirmPhone"
+    tools:showIn="@layout/activity_confirm_phone">
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:background="@color/white"
+        tools:context=".ConfirmPhone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_icons8_long_arrow_left_filled_100"
+                        android:layout_marginLeft="20dp"
+                        android:visibility="gone"
+                        android:layout_marginTop="40dp"
+                        android:rotation="180"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+
+
+
+                        <com.brand.Kratos.customfonts.TextViewSFProDisplayMedium
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Confirm your account with a valid phone "
+                            android:textSize="19.2sp"
+                            android:textColor="#141a22"/>
+
+
+                        <com.brand.Kratos.customfonts.TextViewSFProDisplayRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Your account will be fully created after this action"
+                            android:textSize="17.3dp"
+                            android:layout_marginTop="4dp"
+                            android:textColor="#6e7f8d"/>
+                    </LinearLayout>
+                </FrameLayout>
+
+
+            </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content">
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/image_thumbnail"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_launcher_background"
+                android:layout_margin="4dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content">
+                <com.brand.Kratos.customfonts.MyTextView_Roboto_Medium
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/username_id"
+
+                    android:textColor="@android:color/black"/>
+                <com.brand.Kratos.customfonts.MyTextView_Roboto_Medium
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/user_email_id"
+
+                    android:textColor="@android:color/darker_gray"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+            <android.support.design.widget.TextInputLayout
+                style="@style/StyledTilEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="28.7dp"
+                android:layout_marginRight="28.7dp"
+                android:textColor="@color/black">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+                    <com.rilixtech.CountryCodePicker
+                        android:id="@+id/country_code_sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:ccp_defaultNameCode="UG"  />
+                    <com.brand.Kratos.customfonts.EditText_SF_Pro_Display_Medium
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Phone Number"
+                        android:textAllCaps="false"
+                        android:inputType="number"
+                        android:maxLines="1"
+
+                        android:id="@+id/phone_txt_id"
+                        android:paddingTop="10dp"
+                        android:textColor="@color/black"
+                        android:textCursorDrawable="@drawable/color_cursor"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+
+            </android.support.design.widget.TextInputLayout>
+
+
+
+
+        </LinearLayout>
+
+
+
+        <com.brand.Kratos.customfonts.MyTextView_Roboto_Medium
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/rectangle_button_yellow"
+            android:gravity="end"
+            android:paddingBottom="18.3dp"
+            android:paddingEnd="25dp"
+            android:paddingTop="18dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/next_id"
+            android:text="@string/next"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.brand.Kratos">
+
+    <uses-permission
+        android:name="android.permission.GET_ACCOUNTS"
+        android:maxSdkVersion="22" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
+    <application
+        android:allowBackup="true"
+        android:appComponentFactory="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:appComponentFactory">
+        <meta-data
+            android:name="JW_LICENSE_KEY"
+            android:value="@string/jwplayer_license" />
+
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MainContainer"
+            android:label="@string/title_activity_main_container"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Login"
+            android:label="@string/title_activity_login"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SplashScreen"
+            android:label="@string/title_activity_splash_screen"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+
+                    <!-- Sets the intent action to view the activity -->
+                    <action android:name="android.intent.action.VIEW" />
+                    <!-- Allows the link to be opened from a web browser -->
+                    <category android:name="android.intent.category.BROWSABLE" />
+                    <!-- Allows the deep link to be used without specifying the app name -->
+                    <category android:name="android.intent.category.DEFAULT" />
+                    <!-- URI tutsplus://deeplink -->
+                    <data
+                        android:host="kratosbrand.com"
+                        android:scheme="http" />
+                    <!-- URI http://www.mydeeplink.com -->
+                    <data
+                        android:host="www.kratosbrand.com"
+                        android:scheme="https" />
+
+
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Signup"
+            android:label="@string/title_activity_signup"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".VideoDetails"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|smallestScreenSize|screenLayout"
+            android:label="@string/title_activity_video_details"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity
+            android:name=".TestDetails"
+            android:label="@string/title_activity_test_details"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".IntroActivity"
+            android:theme="@style/Theme.Intro" />
+        <activity
+            android:name=".CategoryVideos"
+            android:label="@string/title_activity_category_videos"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TestingVideoDetails"
+            android:label="@string/title_activity_testing_video_details"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TagsList"
+            android:label="@string/title_activity_tags_list"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MyTags"
+            android:label="@string/title_activity_my_tags"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.pkb.sociallogin.SocialLoginActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"></activity>
+        **For Google Login**
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="com.pkb.sociallogin.SocialLoginActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            tools:ignore="DuplicateActivity"></activity>
+        <activity
+            android:name=".ConfirmPhone"
+            android:label="@string/title_activity_confirm_phone"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/newsimage1"
+        android:layout_width="match_parent"
+        android:layout_height="139dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher_background" />
+
+    <com.brand.Kratos.customfonts.MyTextView_Roboto_Regular
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11.7dp"
+        android:layout_marginTop="11.7dp"
+        android:text="The Best Summer Morden
+Linkin park on European Tour"
+        android:textSize="18.3sp"
+        android:textColor="@color/black"
+        android:id="@+id/newstitle"
+        tools:ignore="RtlCompat" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/newslinear">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            app:riv_corner_radius="2dp"
+            android:scaleType="centerCrop"
+            android:id="@+id/newsimage2"
+            android:src="@drawable/ic_launcher_background"
+            android:layout_marginStart="11.7dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginBottom="12.7dp"
+            tools:ignore="RtlCompat" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_marginStart="11.7dp"
+            tools:ignore="RtlCompat">
+
+            <com.brand.Kratos.customfonts.MyTextView_Roboto_Medium
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/music_24"
+                android:id="@+id/newsname"
+                android:textSize="13.3sp"
+                android:textColor="@color/black"/>
+
+            <com.brand.Kratos.customfonts.MyTextView_Roboto_Regular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_03"
+                android:textSize="10sp"
+                android:id="@+id/newstime"
+                android:textColor="@color/lyrics_black"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/ic_forward_black"
+            android:layout_gravity="center"
+            android:layout_marginEnd="16.5dp"
+            tools:ignore="RtlCompat" />
+
+    </LinearLayout>
+</LinearLayout>

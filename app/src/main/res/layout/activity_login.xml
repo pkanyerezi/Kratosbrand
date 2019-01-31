@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/loginbg"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/credentials_id"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="88dp"
+            android:layout_marginLeft="36.7dp"
+            android:orientation="horizontal">
+
+            <com.brand.Kratos.customfonts.MyTextView_Roboto_Bold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="KRATOSBRAND"
+                android:textSize="31sp"
+                android:textColor="#ffffff"/>
+            <View
+                android:layout_width="1dp"
+                android:layout_marginTop="5dp"
+                android:layout_height="34dp"
+                android:layout_marginLeft="9.2dp"
+                android:background="#ffffff"/>
+
+            <com.brand.Kratos.customfonts.MyTextView_Roboto_Regular
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SPORTS"
+                android:layout_marginLeft="8.5dp"
+                android:textSize="20sp"
+                android:textColor="#f05421"/>
+            <requestFocus></requestFocus>
+        </LinearLayout>
+
+
+        <com.brand.Kratos.customfonts.EditText_Roboto_Regular
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:hint="Email"
+            android:id="@+id/username_txt_id"
+            android:layout_marginTop="54.7dp"
+            android:layout_marginLeft="34.6dp"
+            android:layout_marginRight="33.6dp"
+            android:textColorHint="#ffffff"
+            android:inputType="text"
+            android:textColor="#ffffff"
+            android:textSize="14.4sp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#33ffffff"
+            android:layout_marginLeft="34.6dp"
+            android:layout_marginRight="33.6dp"
+            android:layout_marginTop="6.5dp"/>
+
+
+        <com.brand.Kratos.customfonts.EditText_Roboto_Regular
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="33.6dp"
+            android:background="#00000000"
+            android:hint="Password"
+            android:id="@+id/password_txt_id"
+            android:layout_marginLeft="34.6dp"
+            android:layout_marginRight="33.6dp"
+            android:textColorHint="#ffffff"
+            android:inputType="textPassword"
+            android:textColor="#ffffff"
+            android:textSize="14.4sp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#33ffffff"
+            android:layout_marginLeft="34.6dp"
+            android:layout_marginRight="33.6dp"
+            android:layout_marginTop="6.5dp"/>
+
+        <com.brand.Kratos.customfonts.MyTextView_Roboto_Regular
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="34.6dp"
+            android:layout_marginRight="33.6dp"
+            android:layout_marginTop="53.8dp"
+
+            android:id="@+id/login_btn_id"
+            android:background="@drawable/rectangle"
+            android:gravity="center_horizontal"
+            android:padding="16.4dp"
+            android:text="LOGIN"
+            android:textColor="#ffffff"
+            android:textSize="13.3sp" />
+      <!--  <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:layout_height="wrap_content">
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <com.shaishavgandhi.loginbuttons.FacebookButton
+                android:layout_width="match_parent"
+                android:id="@+id/facebook_linear_id"
+                android:text="Sign in with Facebook"
+                app:iconSize="30dp"
+                android:textAlignment="center"
+                app:roundedCorner="true"
+                app:iconCenterAligned="false"
+                android:layout_margin="16dp"
+                android:layout_height="wrap_content"
+                />
+
+            <com.shaishavgandhi.loginbuttons.GoogleButton
+                android:layout_width="match_parent"
+                android:id="@+id/google_linear_id"
+                android:text="Sign in with Google"
+                android:textAlignment="center"
+                app:roundedCorner="true"
+                android:textColor="@color/black"
+                app:iconCenterAligned="false"
+                android:layout_margin="16dp"
+                app:iconSize="30dp"
+                android:layout_height="wrap_content"
+                />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="250dp"
+    android:layout_height="wrap_content">
+
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+    <LinearLayout
+        android:id="@+id/Linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        android:layout_marginBottom="28.1dp"
+        android:gravity="center_horizontal"
+        android:layout_alignParentBottom="true">
+        <com.brand.Kratos.customfonts.MyTextView_Roboto_Regular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't have an account?"
+            android:textSize="14.4sp"
+            android:textColor="#ffffff"/>
+        <com.brand.Kratos.customfonts.MyTextView_Roboto_Regular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/signup_btn_id"
+            android:text="Sign Up"
+            android:layout_marginLeft="5dp"
+            android:textSize="14.4sp"
+            android:textColor="#d22532"/>
+    </LinearLayout>
+</LinearLayout>
+
+
+</RelativeLayout>

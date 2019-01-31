@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#880E4F</color>
+    <color name="colorPrimaryDark">#fe485a</color>
+    <color name="colorAccent">#000000</color>
+    <color name="shimmer_color_for_image">#55efefef</color>
+    <color name="bgBottomNavigation">#fe485a</color>
+
+    <color name="viewgrey">#DCDCDC</color>
+    <color name="placeholder_bg">#dddddd</color>
+    <color name="item_name">#0c0c0c</color>
+
+    <color name="transaparent_black">#6d000000</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="light_weight_gray">#99000000</color>
+    <color name="drawer_gray">#e2e2e2</color>
+    <color name="image_gray">#bebcbc</color>
+    <color name="music_back">#f5f5f5</color>
+    <color name="mt_text_black">#b3000000</color>
+    <color name="track4_text_gray">#535d49</color>
+    <color name="track4_black">#303030</color>
+    <color name="track3_black">#212121</color>
+    <color name="track3_text_gray">#a2a3a1</color>
+    <color name="taj_dare">#aa990e</color>
+    <color name="pop_text_gray">#666666</color>
+    <color name="lyrics_black">#4c4c4c</color>
+    <color name="view_gray">#707070</color>
+    <color name="lyrics_view_pink">#ff8686</color>
+    <color name="lyrics_gray">#bcbbbb</color>
+    <color name="switch_green">#1bd73b</color>
+    <color name="event_gray">#9a707070</color>
+    <color name="radio_button_green">#32d859</color>
+
+    <color name="first_slide_background">#456aa7</color>
+    <color name="first_slide_buttons">#5eb6cd</color>
+
+    <color name="second_slide_background">#e1586a</color>
+    <color name="second_slide_buttons">#4d1d23</color>
+
+    <color name="third_slide_background">#f2be36</color>
+    <color name="third_slide_buttons">#735a18</color>
+
+    <color name="fourth_slide_background">#13b2c8</color>
+    <color name="fourth_slide_buttons">#337281</color>
+
+    <color name="custom_slide_background">#3F51B5</color>
+    <color name="custom_slide_buttons">#151b41</color>
+
+    <!--Splash Screen-->
+    <item name="splash_background" type="color">@color/colorPrimary</item>
+
+</resources>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    app:layout_behavior="com.brand.Kratos.CardViewAwareScrollingViewBehavior"
+ >
+
+  <LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <com.brand.Kratos.CustomLinearScroll
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/categories_container_id"
+            android:layout_height="wrap_content">
+<!--
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/categories_container_id"
+    android:layout_height="wrap_content">-->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content">
+    <com.brand.Kratos.customfonts.MyTextView_Roboto_Medium
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18.7dp"
+        android:layout_marginTop="19.7dp"
+        android:text="Tags"
+        android:textColor="@color/black"
+        android:textSize="22.3sp" />
+    <View
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="0dp"/>
+    <com.brand.Kratos.customfonts.MyTextView_Roboto_Medium
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="18.7dp"
+        android:layout_marginTop="19.7dp"
+        android:visibility="gone"
+        android:text="See All"
+        android:textColor="@color/image_gray"
+        android:textSize="13.3sp" />
+</LinearLayout>
+
+
+    <!--Genre-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:clipToPadding="false"
+        android:paddingLeft="18.7dp" />
+<!--</LinearLayout>-->
+        </com.brand.Kratos.CustomLinearScroll>
+   <!-- <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <com.brand.Kratos.customfonts.MyTextView_Roboto_Medium
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18.7dp"
+            android:layout_marginTop="19.7dp"
+            android:visibility="gone"
+            android:text="Created for you"
+            android:textColor="@color/black"
+            android:textSize="12.3sp" />-->
+
+        <!--Created for You-->
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+          <sakout.mehdi.StateViews.StateView
+              android:id="@+id/status_page"
+              android:visibility="gone"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:text="@string/connection" />
+          </sakout.mehdi.StateViews.StateView>
+
+          <com.facebook.shimmer.ShimmerFrameLayout
+              android:id="@+id/shimmer_view_container"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:visibility="gone"
+              android:layout_gravity="center"
+              android:orientation="vertical">
+              <include layout="@layout/placeholder" />
+
+          </com.facebook.shimmer.ShimmerFrameLayout>
+          <android.support.v4.widget.SwipeRefreshLayout
+              android:id="@+id/swipeRefreshLayout"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+          <android.support.v7.widget.RecyclerView
+              android:id="@+id/recycler6"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="8dp"
+              android:layout_marginTop="12dp"
+              android:clipToPadding="false" />
+          </android.support.v4.widget.SwipeRefreshLayout>
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:gravity="center"
+              android:layout_height="wrap_content">
+          <com.github.ybq.android.spinkit.SpinKitView
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/loader_id"
+              style="@style/SpinKitView.Large.Circle"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              app:SpinKit_Color="@color/bgBottomNavigation" />
+          </LinearLayout>
+      </RelativeLayout>
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_alignParentBottom="true"
+          android:gravity="center_horizontal"
+          android:id="@+id/progress_container_id"
+          android:layout_height="wrap_content">
+          <com.github.ybq.android.spinkit.SpinKitView
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/spin_kit"
+              style="@style/SpinKitView.Small.ChasingDots"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:visibility="gone"
+              android:layout_gravity="center"
+              app:SpinKit_Color="@color/bgBottomNavigation" />
+      </LinearLayout>
+    <!--</LinearLayout>-->
+
+</LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

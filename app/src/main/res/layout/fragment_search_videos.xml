@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<ScrollView android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android" >-->
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    app:layout_behavior="com.brand.Kratos.CardViewAwareScrollingViewBehavior"
+    >
+    <LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+        <requestFocus />
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@color/white"
+                    app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+                    <com.mancj.materialsearchbar.MaterialSearchBar
+                        style="@style/MaterialSearchBarLight"
+                        app:mt_hint="Custom hint"
+                        app:mt_maxSuggestionsCount="10"
+                        android:focusable="false"
+                        android:windowSoftInputMode="stateHidden"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/search_liveo" />
+                </android.support.v7.widget.Toolbar>
+
+
+            </FrameLayout>
+
+        </android.support.design.widget.AppBarLayout>
+        <ScrollView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_gravity="center"
+
+            xmlns:android="http://schemas.android.com/apk/res/android" >
+        <LinearLayout
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:id="@+id/categories_linear_container_id"
+            android:orientation="vertical">
+
+
+
+
+
+            <com.brand.Kratos.CustomLinearScroll
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/categories_container_id"
+                android:layout_height="wrap_content">
+                <!--
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:id="@+id/categories_container_id"
+                    android:layout_height="wrap_content">-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+                    <com.brand.Kratos.customfonts.MyTextView_Roboto_Medium
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="18.7dp"
+                        android:layout_marginTop="19.7dp"
+                        android:text="Tags"
+                        android:textColor="@color/black"
+                        android:textSize="25.3sp" />
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="0dp"/>
+                    <com.brand.Kratos.customfonts.MyTextView_Roboto_Medium
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="18.7dp"
+                        android:layout_marginTop="19.7dp"
+                        android:text="See All"
+                        android:visibility="gone"
+                        android:textColor="@color/image_gray"
+                        android:textSize="13.3sp" />
+                </LinearLayout>
+
+
+                <!--Genre-->
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp" />
+                <!--</LinearLayout>-->
+            </com.brand.Kratos.CustomLinearScroll>
+
+
+
+
+
+            <com.brand.Kratos.CustomLinearScroll
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/trending_container_id"
+                android:layout_height="wrap_content">
+                <!--
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:id="@+id/categories_container_id"
+                    android:layout_height="wrap_content">-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+                    <com.brand.Kratos.customfonts.MyTextView_Roboto_Medium
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="18.7dp"
+                        android:layout_marginTop="19.7dp"
+                        android:text="Trending"
+                        android:textColor="@color/black"
+                        android:textSize="22.3sp" />
+
+                </LinearLayout>
+
+
+                <!--Genre-->
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_trending_vids"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"/>
+                <!--</LinearLayout>-->
+            </com.brand.Kratos.CustomLinearScroll>
+
+
+
+
+
+
+
+            <com.brand.Kratos.CustomLinearScroll
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/sports_list"
+                android:layout_height="wrap_content">
+                <!--
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:id="@+id/categories_container_id"
+                    android:layout_height="wrap_content">-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+                    <com.brand.Kratos.customfonts.MyTextView_Roboto_Medium
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="18.7dp"
+                        android:layout_marginTop="19.7dp"
+                        android:text="Sports"
+                        android:textColor="@color/black"
+                        android:textSize="22.3sp" />
+
+                </LinearLayout>
+
+
+                <!--Genre-->
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_sports"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"/>
+                <!--</LinearLayout>-->
+            </com.brand.Kratos.CustomLinearScroll>
+
+
+        </LinearLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/search_results_container"
+            android:layout_height="wrap_content">
+
+            <!-- <com.facebook.shimmer.ShimmerFrameLayout
+                 android:id="@+id/shimmer_view_container"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:visibility="gone"
+                 android:layout_gravity="center"
+                 android:orientation="vertical">
+                 <include layout="@layout/placeholder" />
+
+             </com.facebook.shimmer.ShimmerFrameLayout>-->
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/swipeRefreshLayout_search"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="20dp"
+
+                android:layout_marginTop="12dp"
+                android:layout_height="match_parent">
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_trending"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false" />
+            </android.support.v4.widget.SwipeRefreshLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>
+<!--</ScrollView>-->
