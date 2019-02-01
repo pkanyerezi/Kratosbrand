@@ -17,6 +17,8 @@ import com.brand.Kratos.LogJsonInterceptor;
 import com.brand.Kratos.MainContainer;
 import com.brand.Kratos.R;
 import com.brand.Kratos.VideoDetails;
+import com.brand.Kratos.customfonts.EditText_SF_Pro_Display_Medium;
+import com.brand.Kratos.customfonts.EditText_SF_Pro_Display_Regular;
 import com.brand.Kratos.customfonts.MyTextView_Roboto_Medium;
 import com.brand.Kratos.customfonts.MyTextView_Roboto_Regular;
 import com.brand.Kratos.model.VideoContent.Data;
@@ -62,9 +64,9 @@ public class VideosAdapter extends RecyclerView.Adapter<VideosAdapter.MyViewHold
 
 
 
-        MyTextView_Roboto_Regular duration_id;
-        MyTextView_Roboto_Regular textrecycler;
-        MyTextView_Roboto_Medium views_id;
+        EditText_SF_Pro_Display_Regular duration_id;
+        EditText_SF_Pro_Display_Regular textrecycler;
+        EditText_SF_Pro_Display_Medium views_id;
         ImageView thumbnail_id;
         Button share_video;
         Button likes_tx_id;
@@ -79,9 +81,9 @@ public class VideosAdapter extends RecyclerView.Adapter<VideosAdapter.MyViewHold
         public MyViewHolder(View view) {
             super(view);
 
-            duration_id=(MyTextView_Roboto_Regular)view.findViewById(R.id.duration_id);
-            textrecycler=(MyTextView_Roboto_Regular)view.findViewById(R.id.textrecycler);
-            views_id=(MyTextView_Roboto_Medium)view.findViewById(R.id.views_id_txt);
+            duration_id=(EditText_SF_Pro_Display_Regular)view.findViewById(R.id.duration_id);
+            textrecycler=(EditText_SF_Pro_Display_Regular)view.findViewById(R.id.textrecycler);
+            views_id=(EditText_SF_Pro_Display_Medium)view.findViewById(R.id.views_id_txt);
             thumbnail_id=(ImageView)view.findViewById(R.id.thumbnail_id);
             share_video=(Button)view.findViewById(R.id.share_video);
             likes_tx_id=(Button)view.findViewById(R.id.likes_tx_id);
@@ -132,7 +134,7 @@ public class VideosAdapter extends RecyclerView.Adapter<VideosAdapter.MyViewHold
         holder.duration_id.setText(video_duration);
         holder.textrecycler.setText(video_title);
         holder.likes_tx_id.setText(lists.getLikes()+" Likes");
-        holder.dislikes_txt_id.setText(lists.getDislikes()+"Dis-likes");
+        holder.dislikes_txt_id.setText(lists.getDislikes()+" Dis-likes");
         holder.share_video.setText("Share");
         holder.comment_btn.setText("Comments");
         final int likes = lists.getLikes()+1;

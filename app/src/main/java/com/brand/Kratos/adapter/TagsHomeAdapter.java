@@ -74,7 +74,7 @@ public class TagsHomeAdapter extends RecyclerView.Adapter<TagsHomeAdapter.MyView
         final Data lists = tags_list.get(position);
         RandomColor randomColor = new RandomColor();
         //int color = randomColor.randomColor();
-        int color[] = randomColor.random(RandomColor.Color.BLUE, position+1);
+        int color[] = randomColor.random(RandomColor.Color.ORANGE, position+1);
         String[] parts = lists.getName().split(" ");
 //        String lastWord = parts[parts.length - 2]+""+parts[parts.length - 1];
         holder.letter_budge.setLetter(lists.getName());

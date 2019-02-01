@@ -89,7 +89,7 @@ public class SettingsFrag extends Fragment {
                 SharedPreferences.Editor editor = pref.edit();
                 editor.putBoolean("login_status", false);
                 editor.putBoolean("intro_screen", false);
-                editor.putBoolean("tags_view", false);
+                editor.putBoolean("tags_view", true);
                 editor.putString("email","");
                 editor.putString("password","");
                 editor.putString("token","");

@@ -84,7 +84,7 @@ public class TagsList extends AppCompatActivity {
             }
         });
 
-
+        final String social_type = getIntent().getStringExtra("hashtag_id");
 
         swipeRefreshLayout_tags_vids = (SwipeRefreshLayout) findViewById(R.id.swipeRefreshLayout_tags_vids);
         // FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);

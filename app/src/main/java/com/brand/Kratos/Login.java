@@ -14,8 +14,11 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Toast;
 
+import com.brand.Kratos.customfonts.Button_SF_Pro_Display_Semibold;
 import com.brand.Kratos.customfonts.EditText_Roboto_Regular;
+import com.brand.Kratos.customfonts.EditText_SF_Pro_Display_Medium;
 import com.brand.Kratos.customfonts.MyTextView_Roboto_Regular;
+import com.brand.Kratos.customfonts.TextViewSFProDisplayRegular;
 import com.brand.Kratos.model.Login.CallbackResponseLogin;
 import com.brand.Kratos.model.VideoContent.Data;
 import com.brand.Kratos.model.VideoContent.ResponseContent;
@@ -45,11 +48,11 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Login extends AppCompatActivity {
-    MyTextView_Roboto_Regular login_btn_id;
-    MyTextView_Roboto_Regular signup_btn_id;
+    Button_SF_Pro_Display_Semibold login_btn_id;
+    TextViewSFProDisplayRegular signup_btn_id;
 
-    EditText_Roboto_Regular password_txt_id;
-    EditText_Roboto_Regular username_txt_id;
+    EditText_SF_Pro_Display_Medium password_txt_id;
+    EditText_SF_Pro_Display_Medium username_txt_id;
     SharedPreferences pref;
     SharedPreferences.Editor editor;
 
@@ -72,10 +75,10 @@ public class Login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        password_txt_id = (EditText_Roboto_Regular) findViewById(R.id.password_txt_id);
-        username_txt_id = (EditText_Roboto_Regular) findViewById(R.id.username_txt_id);
-        login_btn_id = (MyTextView_Roboto_Regular) findViewById(R.id.login_btn_id);
-        signup_btn_id = (MyTextView_Roboto_Regular) findViewById(R.id.signup_btn_id);
+        password_txt_id = (EditText_SF_Pro_Display_Medium) findViewById(R.id.password_txt_id);
+        username_txt_id = (EditText_SF_Pro_Display_Medium) findViewById(R.id.username_txt_id);
+        login_btn_id = (Button_SF_Pro_Display_Semibold) findViewById(R.id.login_btn_id);
+        signup_btn_id = (TextViewSFProDisplayRegular) findViewById(R.id.signup_btn_id);
         google_linear_id = (GoogleButton) findViewById(R.id.google_linear_id);
         facebook_linear_id = (FacebookButton) findViewById(R.id.facebook_linear_id);
 
@@ -244,6 +247,10 @@ public class Login extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
+
+        pref = getApplicationContext().getSharedPreferences("Settings_variables", 0);
+        Boolean phone_settings = pref.getBoolean("phone_settings", false);
+        String phone = pref.getString("phone_number", "");
         if(requestCode==FACEBOOK_REQUEST_CODE){
             if(resultCode==RESPONCE_CODE){
                 Log.d("Facebook RESPONCE",""+data.getExtras().getString(RESPONCE_KEY));
@@ -276,15 +283,20 @@ public class Login extends AppCompatActivity {
                     editor.putString("expiry_social",expireon);
                     editor.putString("full_name",first_name+" "+last_name);
                     editor.commit();
-                    Intent intent = new Intent(Login.this, ConfirmPhone.class);
-                    intent.putExtra("type", "FACEBOOK");
-                    intent.putExtra("email",email_social);
-                    intent.putExtra("social_token",social_token);
-                    intent.putExtra("access_id",id);
-                    intent.putExtra("full_name",first_name+" "+last_name);
-                    intent.putExtra("photourl", "https://graph.facebook.com/"+id+"/picture?type=normal");
+                    if(phone_settings){
+                        login(email_social, "password", "FACEBOOK","ANDROID", first_name+" "+last_name, phone, id,id);
 
-                    Login.this.startActivity(intent);
+                    }else {
+                        Intent intent = new Intent(Login.this, ConfirmPhone.class);
+                        intent.putExtra("type", "FACEBOOK");
+                        intent.putExtra("email", email_social);
+                        intent.putExtra("social_token", social_token);
+                        intent.putExtra("access_id", id);
+                        intent.putExtra("full_name", first_name + " " + last_name);
+                        intent.putExtra("photourl", "https://graph.facebook.com/" + id + "/picture?type=normal");
+
+                        Login.this.startActivity(intent);
+                    }
                 }
 
            /*{"id":"2120338634676511","first_name":"Patrick","last_name":"Kanyerezi",
@@ -294,8 +306,8 @@ public class Login extends AppCompatActivity {
             }
         }
         if(requestCode==GOOGLE_REQUEST_CODE){
-            if(resultCode==RESPONCE_CODE){
-                Log.d("GOOGLE RESPONCE",""+data.getExtras().getString(RESPONCE_KEY));
+            if(resultCode==RESPONCE_CODE) {
+                Log.d("GOOGLE RESPONCE", "" + data.getExtras().getString(RESPONCE_KEY));
                 String google_data = data.getExtras().getString(RESPONCE_KEY);
                 JsonElement jelem = gson.fromJson(google_data, JsonElement.class);
                 JsonObject jobj = jelem.getAsJsonObject();
@@ -310,34 +322,116 @@ public class Login extends AppCompatActivity {
                 editor.putBoolean("has_photo", true);
                 editor.putString("photourl", photourl);
                 editor.putString("type", "GOOGLE");
-                editor.putString("email",email_google);
-                editor.putString("social_token",id);
-                editor.putString("access_id",id);
-                editor.putString("full_name",displayname);
+                editor.putString("email", email_google);
+                editor.putString("social_token", id);
+                editor.putString("access_id", id);
+                editor.putString("full_name", displayname);
                 editor.commit();
-                Intent intent = new Intent(Login.this, ConfirmPhone.class);
-                intent.putExtra("type", "GOOGLE ");
-                intent.putExtra("email",email_google);
-                intent.putExtra("social_token",id);
-                intent.putExtra("access_id",id);
-                intent.putExtra("full_name",displayname);
-                intent.putExtra("photourl", photourl);
+                if(phone_settings){
+                    login(email_google, "password", "GOOGLE","ANDROID", displayname, phone, id,id);
 
-                Login.this.startActivity(intent);
-                /*{"displayname":"Kanyerezi Patrick","email":"patrickkanyerezi@gmail.com",
-                "familyname":"Patrick","givenname":"Kanyerezi",
-                "scope":"[https:\/\/www.googleapis.com\/auth\/plus.me,
-                 https:\/\/www.googleapis.com\/auth\/userinfo.email,
-                 https:\/\/www.googleapis.com\/auth\/userinfo.profile, profile, email, openid]",
-                 "id":"107152763633129032442",
-                "photourl":"https:\/\/lh3.googleusercontent.com\/a-\/AAuE7mBi41HZFb9lVuGHi-p9xdfCBzGmVfcavCL2zUyX2Q","success":"true"}*/
 
+                    }else {
+                    Intent intent = new Intent(Login.this, ConfirmPhone.class);
+                    intent.putExtra("type", "GOOGLE ");
+                    intent.putExtra("email", email_google);
+                    intent.putExtra("social_token", id);
+                    intent.putExtra("access_id", id);
+                    intent.putExtra("full_name", displayname);
+                    intent.putExtra("photourl", photourl);
+
+                    Login.this.startActivity(intent);
+                }
             }
         }
         super.onActivityResult(requestCode, resultCode, data);
     }
 
+    public void login(final String email, final String password, final String type, final String platform, final String full_name, final String phone_number, final String access_id, final String access_token) {
 
+        Map<String, String> requestBody = new HashMap<>();
+        requestBody.put("email", email);
+        requestBody.put("password", password);
+        requestBody.put("type", type.replace(" ",""));
+        requestBody.put("platform", "ANDROID");
+        requestBody.put("full_name", full_name);
+        requestBody.put("phone_number", phone_number);
+        requestBody.put("access_id", access_id);
+        requestBody.put("access_token", access_token);
+
+        OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
+        httpClient.addInterceptor(new Interceptor() {
+            @Override
+            public okhttp3.Response intercept(Interceptor.Chain chain) throws IOException {
+                Request request = chain.request().newBuilder()
+                        //.addHeader("timestamp", "153138130")
+                        .addHeader("Authorize", "x-access-token: eyJh...24k")
+                        .build();
+                return chain.proceed(request);
+            }
+        });
+        httpClient.interceptors().add(new LogJsonInterceptor());
+        Retrofit retrofit = new Retrofit.Builder()
+                // .baseUrl("http://188.166.157.18:3000/")
+                .baseUrl(api.BaseUrl)
+                .addConverterFactory(GsonConverterFactory.create())
+                .client(httpClient.build())
+                .build();
+        api apiCallInterface = retrofit.create(api.class);
+        Call<CallbackResponseLogin> call = apiCallInterface.getloginResponse(requestBody);
+
+
+        call.enqueue(new Callback<CallbackResponseLogin>() {
+            @Override
+            public void onResponse(Call<CallbackResponseLogin> call, Response<CallbackResponseLogin> response) {
+
+                if(response.isSuccessful()){
+
+                    pref = getApplicationContext().getSharedPreferences("Settings_variables", 0); // 0 - for private mode
+                    SharedPreferences.Editor editor = pref.edit();
+                    editor.putBoolean("login_status", true);
+                    editor.putBoolean("intro_screen", true);
+                    editor.putBoolean("tags_view", false);
+                    editor.putBoolean("social_login", true);
+                    editor.putBoolean("phone_settings", true);
+                    editor.putString("email",email);
+                    editor.putString("type", type.replace(" ",""));
+                    editor.putString("phone_number", phone_number);
+                    editor.putString("password","password");
+                    editor.putString("access_id", access_id);
+                    editor.putString("access_token", access_token);
+                    editor.putString("token",response.body().getToken());
+                    editor.putInt("expiry",response.body().getExpiresIn());
+                    editor.putString("full_name",response.body().getDisplayName());
+                    editor.commit();
+                    finish();
+                    Intent intent2 = new Intent("finish_activity");
+                    sendBroadcast(intent2);
+                    Intent intent = new Intent(Login.this, MainContainer.class);
+                    Login.this.startActivity(intent);
+
+                }else{
+                    try {
+                        JSONObject jObjError = new JSONObject(response.errorBody().string());
+                        Toasty.error(Login.this, jObjError.getString("message"), Toast.LENGTH_LONG).show();
+                    } catch (Exception e) {
+                        Toasty.error(Login.this, e.getMessage(), Toast.LENGTH_LONG).show();
+                    }
+                    //Toasty.error(LoginTrue.this, "Unauthorized access", Toast.LENGTH_SHORT, true).show();
+
+
+                }
+
+            }
+
+            @Override
+            public void onFailure(Call<CallbackResponseLogin> call, Throwable t) {
+                Toasty.error(Login.this, "Invalid Response.Connection Failure", Toast.LENGTH_SHORT, true).show();
+
+
+            }
+        });
+    }
 
 
 }

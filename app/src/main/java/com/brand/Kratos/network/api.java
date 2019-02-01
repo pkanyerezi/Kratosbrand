@@ -73,7 +73,7 @@ public interface api {
                                      @Query("search") String search,
                                      @Query("sort") String sort,
                                      @Query("direction") String direction,
-                                     @Query("tag_id") int tag_id
+                                     @Query("tag") int tag_id
                                      );
     @Headers("Content-Type: application/json")
     @GET("content") // use @POST if api is post.

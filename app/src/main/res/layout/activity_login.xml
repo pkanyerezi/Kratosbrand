@@ -46,50 +46,63 @@
         </LinearLayout>
 
 
-        <com.brand.Kratos.customfonts.EditText_Roboto_Regular
+        <android.support.design.widget.TextInputLayout
+            style="@style/StyledTilEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#00000000"
-            android:hint="Email"
-            android:id="@+id/username_txt_id"
-            android:layout_marginTop="54.7dp"
-            android:layout_marginLeft="34.6dp"
-            android:layout_marginRight="33.6dp"
-            android:textColorHint="#ffffff"
-            android:inputType="text"
-            android:textColor="#ffffff"
-            android:textSize="14.4sp" />
+            android:layout_marginLeft="28.7dp"
+            android:layout_marginRight="28.7dp"
+            android:textColor="@color/black">
+
+            <com.brand.Kratos.customfonts.EditText_SF_Pro_Display_Medium
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:textAllCaps="false"
+                android:inputType="textEmailAddress"
+                android:id="@+id/username_txt_id"
+                android:maxLines="1"
+                android:paddingTop="10dp"
+                android:textColor="@color/black"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:textSize="14sp" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+
+
+        <android.support.design.widget.TextInputLayout
+            style="@style/StyledTilEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="28.7dp"
+            android:layout_marginRight="28.7dp"
+            android:textColor="@color/black">
+
+            <com.brand.Kratos.customfonts.EditText_SF_Pro_Display_Medium
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:textAllCaps="false"
+                android:inputType="textPassword"
+                android:id="@+id/password_txt_id"
+                android:maxLines="1"
+                android:paddingTop="10dp"
+                android:textColor="@color/black"
+                android:textCursorDrawable="@drawable/color_cursor"
+                android:textSize="14sp" />
+
+        </android.support.design.widget.TextInputLayout>
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="#33ffffff"
             android:layout_marginLeft="34.6dp"
             android:layout_marginRight="33.6dp"
             android:layout_marginTop="6.5dp"/>
 
 
-        <com.brand.Kratos.customfonts.EditText_Roboto_Regular
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="33.6dp"
-            android:background="#00000000"
-            android:hint="Password"
-            android:id="@+id/password_txt_id"
-            android:layout_marginLeft="34.6dp"
-            android:layout_marginRight="33.6dp"
-            android:textColorHint="#ffffff"
-            android:inputType="textPassword"
-            android:textColor="#ffffff"
-            android:textSize="14.4sp" />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#33ffffff"
-            android:layout_marginLeft="34.6dp"
-            android:layout_marginRight="33.6dp"
-            android:layout_marginTop="6.5dp"/>
-
-        <com.brand.Kratos.customfonts.MyTextView_Roboto_Regular
+        <com.brand.Kratos.customfonts.Button_SF_Pro_Display_Semibold
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="34.6dp"
@@ -97,12 +110,13 @@
             android:layout_marginTop="53.8dp"
 
             android:id="@+id/login_btn_id"
-            android:background="@drawable/rectangle"
             android:gravity="center_horizontal"
             android:padding="16.4dp"
             android:text="LOGIN"
             android:textColor="#ffffff"
-            android:textSize="13.3sp" />
+            android:textSize="13.3sp"
+            android:background="@drawable/black_rect"
+/>
       <!--  <View
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -171,13 +185,14 @@
         android:layout_marginBottom="28.1dp"
         android:gravity="center_horizontal"
         android:layout_alignParentBottom="true">
-        <com.brand.Kratos.customfonts.MyTextView_Roboto_Regular
+
+        <com.brand.Kratos.customfonts.TextViewSFProDisplayRegular
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Don't have an account?"
-            android:textSize="14.4sp"
-            android:textColor="#ffffff"/>
-        <com.brand.Kratos.customfonts.MyTextView_Roboto_Regular
+            android:textSize="17.3dp"
+            android:textColor="#6e7f8d"/>
+        <com.brand.Kratos.customfonts.TextViewSFProDisplayRegular
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/signup_btn_id"

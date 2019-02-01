@@ -101,7 +101,7 @@ public class MyTags extends AppCompatActivity {
         next_id.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(my_tags.size() > 2) {
+               // if(my_tags.size() > 2) {
                     String json = "{" +
                             "\"tags\": [";
                     for (int i = 0; i < my_tags.size(); i++) {
@@ -128,10 +128,10 @@ public class MyTags extends AppCompatActivity {
                 editor.putBoolean("tags_view",true);
                 editor.commit();
 
-                }else{
-                    //ff
+              /*  }else{
+
                     Toasty.warning(getApplicationContext(), "Select atleast 3 tags", Toast.LENGTH_LONG).show();
-                }
+                }*/
             }
         });
 

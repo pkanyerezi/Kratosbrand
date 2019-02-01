@@ -29,7 +29,7 @@
                 android:id="@+id/thumbnail_id"
                 android:src="@drawable/youtube"/>
 
-            <com.brand.Kratos.customfonts.MyTextView_Roboto_Regular
+            <com.brand.Kratos.customfonts.EditText_SF_Pro_Display_Regular
                 android:layout_width="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:padding="2dp"
@@ -47,7 +47,7 @@
                 android:background="@color/transaparent_black"
                 android:layout_marginBottom="30dp"
                 android:layout_height="wrap_content">
-                <com.brand.Kratos.customfonts.MyTextView_Roboto_Regular
+                <com.brand.Kratos.customfonts.EditText_SF_Pro_Display_Regular
                     android:layout_width="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:padding="2dp"
@@ -178,12 +178,12 @@
             android:visibility="gone"
             android:layout_marginTop="8dp">
 
-            <com.brand.Kratos.customfonts.MyTextView_Roboto_Medium
+            <com.brand.Kratos.customfonts.EditText_SF_Pro_Display_Medium
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/views_id_txt"
                 android:textColor="@android:color/black"/>
-            <com.brand.Kratos.customfonts.MyTextView_Roboto_Medium
+            <com.brand.Kratos.customfonts.EditText_SF_Pro_Display_Medium
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/like"

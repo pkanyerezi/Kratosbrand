@@ -150,6 +150,7 @@ public class ConfirmPhone extends AppCompatActivity {
                                 editor.putBoolean("intro_screen", true);
                                 editor.putBoolean("tags_view", false);
                                 editor.putBoolean("social_login", true);
+                                editor.putBoolean("phone_settings", true);
                                 editor.putString("email",email_social);
                                 editor.putString("type", social_type.replace(" ",""));
                                 editor.putString("phone_number", finalFull_phone);
